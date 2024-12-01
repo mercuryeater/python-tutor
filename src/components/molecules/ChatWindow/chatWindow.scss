@@ -32,25 +32,61 @@
 
 .sendMessageForm {
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc; /* Border for the entire form */
+  background-color: #e1f4ff; /* Background for the entire form */
+  transition: box-shadow 0.2s;
+  cursor: text; /* Indicate the form is clickable */
+  position: relative;
+
+  &:focus-within {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Highlight when focused */
+  }
 
   &__input {
-    width: 80%;
-    padding: 0.5rem;
-    border-radius: 10px 0px 0px 10px;
-    border: none;
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 0;
+    border-radius: 10px;
+    border: none; /* Remove default input border */
+    background-color: inherit;
+    outline: none;
+    resize: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    overflow-y: auto;
+    height: 3rem;
+    max-height: 200px;
+
+    &:active {
+      outline: none; /* Remove default focus outline */
+      border: none;
+    }
+
+    &:focus {
+      outline: none; /* Remove default focus outline */
+      border: none;
+    }
   }
 
   &__sendBtn {
+    align-self: flex-end;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(204, 204, 0);
     border: none;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 50%;
     padding: 0.5rem;
     cursor: pointer;
     transition: all 0.2s;
     font-weight: 500;
-    width: 20%;
 
     &:hover {
       background-color: rgb(166, 166, 0);
