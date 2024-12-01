@@ -1,16 +1,17 @@
 .bubble {
   padding: 10px;
   border-radius: 10px;
-
-  max-width: 70%;
 }
 
-.bot {
+.assistant {
   align-self: flex-start;
-  background-color: #f6ff48;
+  // background-color: #f6ff48;
+  width: 100%;
+  color: white;
 }
 
 .user {
   align-self: flex-end;
   background-color: #ffc74e;
+  max-width: 70%;
 }
