@@ -4,7 +4,13 @@
   gap: 0.5rem;
   width: 80%;
   max-width: 1000px;
-  background-color: #e2e9ff31;
+  background: rgb(0, 0, 29);
+  background: linear-gradient(
+    203deg,
+    rgba(0, 0, 29, 0.2) 0%,
+    rgba(9, 9, 121, 0.2) 35%,
+    rgba(0, 213, 255, 0.2) 100%
+  );
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 7, 74, 0.578);
   padding: 0.5rem;
@@ -15,9 +21,13 @@
   height: 100%;
   overflow-y: auto;
   scrollbar-width: none;
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+.messagesContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .sendMessageForm {
