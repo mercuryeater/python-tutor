@@ -1,7 +1,8 @@
 import { Message } from "ai/react";
+import "./messageBubble.scss";
 
 interface MessageBubbleProps {
-  message: Message;
+  message: Message | any;
 }
 const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
   const { content, role } = message;
