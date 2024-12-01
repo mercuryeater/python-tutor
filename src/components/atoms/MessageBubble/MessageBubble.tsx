@@ -3,7 +3,7 @@ import "./messageBubble.scss";
 import MarkdownComponent from "../ReactMarkdown/ReactMarkdown";
 
 interface MessageBubbleProps {
-  message: Message | any;
+  message: Message;
 }
 const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
   const { content, role } = message;
