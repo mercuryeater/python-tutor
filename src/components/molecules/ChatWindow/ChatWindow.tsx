@@ -7,6 +7,7 @@ import MessageBubble from "@/components/atoms/MessageBubble/MessageBubble";
 import LoadingBubble from "@/components/atoms/LoadingBubble/LoadingBubble";
 
 import "./chatWindow.scss";
+import KodBotCard from "@/components/atoms/PyBotCard/PyBotCard";
 
 const ChatWindow: React.FC = () => {
   const messagesContainerRef = useRef(null);
@@ -31,6 +32,7 @@ const ChatWindow: React.FC = () => {
     <div className="chatWindow">
       <>
         <div ref={messagesContainerRef} className="messagesContainer">
+          <KodBotCard />
           {messages.map((message, index) => (
             <MessageBubble key={`message-${index}`} message={message} />
           ))}

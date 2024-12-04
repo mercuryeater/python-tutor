@@ -1,0 +1,30 @@
+.pyBotCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: white;
+  padding: 1.5rem;
+
+  img {
+    filter: drop-shadow(0 0 0.75rem #ff8c00af);
+    width: 100%;
+    height: 100%;
+    max-width: 477px;
+    max-height: 577px;
+    object-fit: cover;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
